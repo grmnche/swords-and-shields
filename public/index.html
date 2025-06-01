@@ -1,19 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
+    <!-- Базовые мета-теги -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Web site created using create-react-app" />
 
-    <!-- manifest.json provides metadata used when your web app is installed on a user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/ -->
+    <!-- Основные SEO-теги -->
+    <title>Мечи и Щиты</title>
+    <meta name="description" content="Бесплатная онлайн-версия классической игры с уникальным дизайном. Сразитесь в поединке Мечей и Щитов!" />
+    <meta name="keywords" content="мечи и щиты, крестики-нолики, онлайн игра, бесплатная игра" />
+
+    <!-- Open Graph / Социальные сети -->
+    <meta property="og:title" content="Мечи и Щиты" />
+    <meta property="og:description" content="Бесплатная онлайн-версия классической игры с уникальным дизайном" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://grmnche.github.io/tic-tac-toe-game/" />
+    <meta property="og:image" content="%PUBLIC_URL%/preview.jpg" />
+    <meta property="og:site_name" content="Мечи и Щиты" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Мечи и Щиты" />
+    <meta name="twitter:description" content="Бесплатная онлайн-версия классической игры с уникальным дизайном" />
+    <meta name="twitter:image" content="%PUBLIC_URL%/preview.jpg" />
+
+    <!-- Favicon -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!-- Notice the use of %PUBLIC_URL% in the tags above. It will be replaced with the URL of the `public` folder during the build. Only files inside the `public` folder can be referenced from the HTML. Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will work correctly both with client-side routing and a non-root public URL. Learn how to configure a non-root public URL by running `npm run build`. -->
-    <title>Игра "Мечи и Щиты"</title>
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <!-- Каноническая ссылка -->
+    <link rel="canonical" href="https://grmnche.github.io/tic-tac-toe-game/" />
+
+    <!-- Предзагрузка основных ресурсов -->
+    <link rel="preload" href="%PUBLIC_URL%/static/js/main.js" as="script" />
+    <link rel="preload" href="%PUBLIC_URL%/static/css/main.css" as="style" />
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <strong>Для работы приложения "Мечи и Щиты" необходимо включить JavaScript.</strong>
+      <p>Игра представляет собой современную версию классических крестиков-ноликов с уникальным дизайном и механикой.</p>
+    </noscript>
     <div id="root"></div>
-    <!-- This HTML file is a template. If you open it directly in the browser, you will see an empty page. You can add webfonts, meta tags, or analytics to this file. The build step will place the bundled scripts into the <body> tag. To begin the development, run `npm start` or `yarn start`. To create a production bundle, use `npm run build` or `yarn build`. -->
+
+    <!-- Structured data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Мечи и Щиты",
+        "url": "https://grmnche.github.io/tic-tac-toe-game/",
+        "description": "Онлайн версия игры Мечи против Щитов",
+        "applicationCategory": "Game",
+        "operatingSystem": "Web Browser",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
   </body>
 </html>
