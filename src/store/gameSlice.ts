@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { combinations } from 'mathjs';
 
 interface Field {
   number: number;
@@ -80,6 +79,8 @@ const gameSlice = createSlice({
           state.winner.combination = combination;
           return isWinningCombination;
         }
+
+        return false;
       });
     },
     restartGame: (state) => {
