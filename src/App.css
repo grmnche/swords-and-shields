@@ -113,7 +113,7 @@ h2 {
   transition: all 0.3s ease;
 }
 
-.tic-tac-toe__restart-btn {
+.restart-btn {
   background: white;
   border: 2px solid #e0e0e0;
   border-radius: 6px;
@@ -128,13 +128,13 @@ h2 {
   font-weight: 400;
 }
 
-.tic-tac-toe__restart-btn:hover {
+.restart-btn:hover {
   border-color: #999;
   transform: translateY(-2px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.tic-tac-toe__restart-btn:active {
+.restart-btn:active {
   transform: translateY(0);
 }
 
@@ -152,7 +152,7 @@ h2 {
 
 h1,
 h2,
-.tic-tac-toe__restart-btn {
+.restart-btn {
   animation: fadeIn 0.8s ease-out;
 }
 
@@ -175,7 +175,7 @@ h2:last-of-type {
     font-size: 1.5rem;
   }
 
-  .tic-tac-toe__restart-btn {
+  .restart-btn {
     padding: 0.6rem 1.5rem;
   }
 }

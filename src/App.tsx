@@ -23,7 +23,7 @@ function App() {
 
       <button
         type="button"
-        className="tic-tac-toe__restart-btn"
+        className="restart-btn"
         onClick={() => {
           dispatch(restartGame());
           // Сбрасываем флаг рестарта
