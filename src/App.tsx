@@ -1,12 +1,9 @@
-import { useEffect, useState } from 'react';
 import './App.css';
-import { Button, TextField } from '@mui/material';
-import { changeRole, resetRestartFlag, restartGame } from './store/gameSlice';
+import { resetRestartFlag, restartGame } from './store/gameSlice';
 import { useDispatch } from 'react-redux';
 import Chart from './components/Chart';
 import { useSelector } from 'react-redux';
 import { GameState } from './store/gameSlice';
-import { UnknownAction } from 'redux';
 
 function App() {
   const state = useSelector((state: { game: GameState }) => state.game);
