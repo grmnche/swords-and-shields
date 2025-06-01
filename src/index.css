@@ -19,4 +19,7 @@ code {
 
   min-height: 100vh;
   padding: 24px;
+
+  background-color: #f8f8f8;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
