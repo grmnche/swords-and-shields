@@ -2,6 +2,7 @@
   "name": "swords-and-shields",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://grmnche.github.io/tic-tac-toe-game",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
