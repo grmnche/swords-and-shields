@@ -1,0 +1,197 @@
+.chart {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.field {
+  position: relative;
+  aspect-ratio: 1/1;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.field:hover:not(:disabled) {
+  border-color: #999;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.field:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.field:disabled {
+  cursor: not-allowed;
+  opacity: 0.9;
+}
+
+.field.--active-cross::before {
+  content: '🗡';
+  font-size: 48px;
+  font-weight: 200;
+  color: #222;
+  animation: appear 0.3s ease-out;
+}
+
+.field.--active-zero::before {
+  content: '🛡';
+  font-size: 48px;
+  font-weight: 200;
+  color: #222;
+  animation: appear 0.3s ease-out;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Эффект победы */
+.field.winning-cell {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-color: #222;
+}
+
+@media (max-width: 400px) {
+  .chart {
+    max-width: 260px;
+    padding: 12px;
+  }
+
+  .field.--active-cross::before,
+  .field.--active-zero::before {
+    font-size: 40px;
+  }
+}
+
+/* App.css */
+.App {
+  background-color: #f8f8f8;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  color: #222;
+  letter-spacing: -0.03em;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #222, transparent);
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin: 1rem 0;
+  color: #444;
+  transition: all 0.3s ease;
+}
+
+.tic-tac-toe__restart-btn {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  color: #222;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.tic-tac-toe__restart-btn:hover {
+  border-color: #999;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tic-tac-toe__restart-btn:active {
+  transform: translateY(0);
+}
+
+/* Анимация появления элементов */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1,
+h2,
+.tic-tac-toe__restart-btn {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Стили для сообщения о победе */
+h2:last-of-type {
+  font-weight: 400;
+  color: #222;
+  padding: 0.5rem 1.5rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .tic-tac-toe__restart-btn {
+    padding: 0.6rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
